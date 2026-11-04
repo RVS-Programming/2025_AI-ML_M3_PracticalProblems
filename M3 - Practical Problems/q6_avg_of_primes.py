@@ -12,7 +12,17 @@ def is_prime(num):
     return True
 
 def average_of_primes(L):
-    return
+    if L == []:
+        return 0
+    sum_of_primes = 0
+    num_primes = 0
+    for num in L:
+        if (is_prime(num)):
+            sum_of_primes += num
+            num_primes += 1
+    if num_primes == 0:
+        return 0
+    return sum_of_primes / num_primes
 
 """ Test 6 """
 import math
