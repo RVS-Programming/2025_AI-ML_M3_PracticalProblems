@@ -4,6 +4,13 @@ Input: integer n
 Output: number of odd digits in n
 """
 def num_odd_digits(n):
+    n = abs(n)
+    num = 0
+    while (n > 0):
+        digit = n%10
+        if ((digit % 2) == 1):
+            num += 1
+        n = n//10
     return
 
 """ Test 4 """
