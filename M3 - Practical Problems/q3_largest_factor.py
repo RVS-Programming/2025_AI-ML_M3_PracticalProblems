@@ -4,7 +4,10 @@ Input: integer n
 Output: largest factor of n less than n itself
 """
 def largest_factor(n):
-    return
+    if (n == 1): return 1
+    for i in range(n-1, 1, -1):
+        if (n % i == 0): return i
+    return 1
 
 """ Test 3 """
 def test_largest_factor():
