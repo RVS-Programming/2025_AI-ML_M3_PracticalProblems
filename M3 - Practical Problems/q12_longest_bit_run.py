@@ -6,7 +6,18 @@ Output: the length of the longest run of 0s or 1s
 
 
 def longest_bit_run(s):
-    return
+    prev = -1
+    current_count = 0
+    max_count = 0
+    for bit in s:
+        if(bit == prev):
+            current_count += 1
+        else:
+            current_count = 1
+        if(current_count > max_count):
+            max_count = current_count
+        prev = bit
+    return max_count
 
 """ Test 12 """
 def test_longest_bit_run():
