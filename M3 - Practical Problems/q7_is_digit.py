@@ -5,7 +5,10 @@ Output: True if s contains at least one character and every char is a digit
         False otherwise
 """
 def is_digit(s):
-    return
+        if (s == ""): return False
+    for c in s:
+        if (not ("0" <= c <= "9")): return False
+    return True
 
 """ Test 7 """
 def test_is_digit():
