@@ -5,7 +5,12 @@ Output: True if s contains at least one character and every char is lowercase
         False otherwise
 """
 def is_lower(s):
-    return
+    if s == "": return False
+    cased_char = False
+    for c in s:
+        if ("A" <= c <= "Z"): return False
+        if ("a" <= c <= "z"): cased_char = True
+    return cased_char
 
 """ Test 8 """
 def test_is_lower():
