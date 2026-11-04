@@ -4,7 +4,14 @@ Input: integer n
 Output: number of steps it takes to reach 1 from n following the Collatz Conjecture
 """
 def collatz(n):
-    return
+    num_steps = 0
+    while (n > 1):
+        if ((n % 2) == 0):
+            n = n/2
+        else:
+            n = 3*n + 1
+        num_steps += 1
+    return num_steps
 
 """ Test 11 """
 def test_collatz():
