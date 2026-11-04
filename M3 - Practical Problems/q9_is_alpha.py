@@ -5,7 +5,10 @@ Output: True if s contains at least one character and every char is a letter
         False otherwise
 """
 def is_alpha(s):
-    return
+    if (s == ""): return False
+    for c in s:
+        if (not (("a" <= c <= "z") or ("A" <= c <= "Z"))): return False
+    return True
 
 """ Test 9 """
 def test_is_alpha():
