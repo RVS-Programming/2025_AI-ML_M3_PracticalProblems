@@ -4,7 +4,11 @@ Input: list of strings
 Output: length of longest string in list
 """
 def longest_string_length(L):
-    return
+    longest_length = 0
+    for s in L:
+        if (len(s) > longest_length):
+            longest_length = len(s)
+    return longest_length
 
 """ Test 5 """
 def test_longest_string_length():
