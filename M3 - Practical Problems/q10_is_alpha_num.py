@@ -5,7 +5,10 @@ Output: True if s contains at least one character and each char is a letter or d
         False otherwise
 """
 def is_alpha_num(s):
-    return
+        if (s == ""): return False
+    for c in s:
+        if (not (is_alpha(c) or is_digit(c))): return False
+    return True
 
 """ Test 10 """
 def test_is_alpha_num():
